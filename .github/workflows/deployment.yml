@@ -22,20 +22,20 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Installing node js
-        uses: action/setup-node@v2-beta
+        uses: actions/setup-node@v2-beta
         with:
           node-version: 12
       
-      - name: Installing npm
+      - name: Installing yarn using Github Action
         uses: Borales/actions-yarn@v2.3.0
         with:
           cmd: install
       
-      - name: yarn build
+      - name: Building yarn file
         run: yarn build
       
       - name: Installing Surge
         run: npm install -g surge
       
-      - name: Deployment on surge
+      - name: Deployment on Surge
         run: surge ./build tightfisted-organization12345.surge.sh --token ${{ secrets.TOKEN_SURGE }}
