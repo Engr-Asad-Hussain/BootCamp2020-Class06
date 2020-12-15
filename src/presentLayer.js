@@ -9,8 +9,6 @@ function PresentLayer() {
     let [newDesc, setDesc] = useState("");
     let [newAmount, setAmount] = useState(0);
 
-    let [del, setDel] = useState(0);
-
     const handledAddition = (event) => {    // By default handledAddition will bring some event with submit button
         event.preventDefault();
         if (Number(newAmount) === 0) {
