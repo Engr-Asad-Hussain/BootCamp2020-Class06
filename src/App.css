@@ -1,0 +1,44 @@
+.container {
+  max-width: 350px;
+  min-height: 450px;
+  margin: 0 auto;
+  background-color: #efefef;
+  box-shadow: 0 0 10px gray;  /*right-left  top-bottom  blur  color*/
+  padding: 10px 40px 40px;      /*top  left-right  bottom*/
+}
+.text-center {
+  text-align: center;
+}
+
+.amount-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px gray;
+}
+
+.history-form {
+  margin: 0;
+  padding: 0px;                     /*this will give 0px before 1st hsitory*/
+}
+
+.history-form > li {
+  display: flex;                    /*Cash          $500*/
+  justify-content: space-between;   /*Cash          $500*/
+  box-shadow: 0 2px 3px gray;     /*right-left  top-bottom  blur*/
+  background-color: #ffffff;
+  padding: 10px;                    /*top-right-bottom-left*/
+  margin: 8px 0;                    /*top-bottom  left-right*/
+  border-radius: 2px;               /*top-left  top-right  bottom-right  bottom-left*/
+  border-right: 5px solid #b6960a;
+}
+
+.transaction-form input {
+  width: 96%;
+  height: 25px;
+  margin: 8px 0;        /*top-bottom  left-right*/
+  padding: 5px;        /*top-left-right-bottm*/
+  border: 1.5px solid rgb(218, 215, 215);
+}
+
