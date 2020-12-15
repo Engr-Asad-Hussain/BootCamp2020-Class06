@@ -38,4 +38,4 @@ jobs:
         run: npm install -g surge
       
       - name: Deployment on Surge
-        run: surge ./build tightfisted-organization12345.surge.sh --token ${{ secrets.TOKEN_SURGE }}
+        run: surge ./build tightfisted-organization12345.surge.sh --token ${{ secrets.SURGE_TOKEN }}
