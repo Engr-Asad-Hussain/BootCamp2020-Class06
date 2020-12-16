@@ -13,6 +13,10 @@ const NewTransaction = () => {
             stringInfo: des,
             amount: dollar
         });
+        /* 
+            This will reset the "des" on each submit so that 
+            if someone double clicks it would not submit again the same transaction.
+        */
         setDes('');
     }
 
@@ -40,6 +44,9 @@ const NewTransaction = () => {
                         value={dollar}
                         onChange={ (event)=> setDollar(Number(event.target.value))}
                         required="required"
+                        /*
+                            [x] Number() because by default if we input it takes it as a string.
+                        */
                     />
                 </div>
                 <button className="btn" type="submit">Add transaction</button>
