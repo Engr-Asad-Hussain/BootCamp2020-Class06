@@ -3,7 +3,7 @@ import Context from '../context/Context';
 import '../App.css';
 
 const ClassXA = () => {
-    let {removeStudents} = useContext(Context);
+    let { removeStudents } = useContext(Context);
 
     return (
         <div>

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Context from '../context/Context';
 
 const Header = () => {
-    let {students} = useContext(Context);
+    let { students } = useContext(Context);
     return (
         <div>
             <h1>Context API and Reducer</h1>

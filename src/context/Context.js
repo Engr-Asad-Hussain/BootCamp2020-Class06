@@ -24,6 +24,10 @@ export const ContextProvider = ({ children }) => {
             }
         )
     }
+    /*
+        [x] state is an array and we can apply different functions of an array
+        [x] state.pop() will remove last element from state [] and safe this new array in state.
+    */
 
     return (
         <Context.Provider value={ {
