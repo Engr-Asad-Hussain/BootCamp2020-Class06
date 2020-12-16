@@ -6,8 +6,8 @@ const ClassXA = () => {
     /*console.log(studentBio)*/
     /* 
         We are requesting React, to useContext named as "Context"
-        and take the values which was created in Context and
-        save in values variable
+        and destucture it and use addStudents which was sent as a value in
+        <Context.Provider>
     */
    
     return (

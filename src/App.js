@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
 import ClassXA from './components/ClassX-A';
-import ClassXB from './components/ClassX-B';
 import { ContextProvider } from './GlobalState/Context';
 import './App.css';
 
@@ -11,7 +10,6 @@ function App() {
       <ContextProvider>
         <Header />
         <ClassXA />
-        <ClassXB />
       </ContextProvider>
     </div>
   );

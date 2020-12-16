@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+## ...state and payload:
+- **View Details in Reducer.js**
+- When this case call's make a new array [] which carries two elements
+    1. action.payload {key, value} means whatever was dispatch in addStudents() 
+    2. ...state: Previous state that carriers [{}, {}, {}] i-e, without new action.payload.
+-  action.payload carries {stringInfo: newDes, amount: newAmount}
+- ...state carries {stringInfo: "Cook", amount: 240}, {stringInfo: "Book", amount: 300}
+- for more understanding use => console.log(action.payload) and console.log(...state)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## action
+- **View Details in Reducer.js**
+- action is nothing but just a javascript object i-e, { }
 
-## Available Scripts
+## { studentsBio }
+- **View Details in Header.js**
+- let { studentBio } = useContext(Context);
+- Here we have done destucturing. Means whatever is passed in <Context.Provider value={Here}> will be used as it is with same name.
+- { } this is known as de-stucture
+- { studentBio } => studentBio was given as a key in <Context.Provider> extract that variable
+- similarly we can extract addStudent also, because this is also sent in <Context.Provider>  
 
-In the project directory, you can run:
+## values.map( (object, index)=>{} ) and key={index}
+- **View Details in Header.js**
+- {values.map( (object, index)=> {
+        return (
+        <li key={index}>Name: {object.name}, Roll No: {object.rollNo}</li>
+        )
+    })}
+- Here we are telling that; Array contains multiple object {} so, map that all {} one by one in <li>
+- Whenever we map() it returns indexes, so that we can give each <li> a unique index number
+- Therefore we use key={index}
+- If we don't use key={index} then browser will give warning: of key props.
 
-### `yarn start`
+## let values = useContext(Context);
+- We are requesting React, to useContext named as "Context" and take the values which was created in Context and save in values variable.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## let [state, dispatch] = useReducer(Reducer, studentBio);
+- Now, If we want to add more values or remove values to our intialState (studentBio) then we have to use Reducer.
+- Reducer is the one how has the access/permission to change something in Context. 
+- So, if someone wants to change in globalContext will request to Reducer, and then Reducer will goto Context and change that value.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## { children }
+- **View detials in Context.js**
+- {children} is like a props. Means all the components will come at this place.
+- like: <Header /> and <ClassXA /> is a children for <ContextProvider> 
+    
+    <ContextProvider>
+        <Header />
+        <ClassXA />
+    </ContextProvider>
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## values={} in ContextProvider
+-- **View details in Contex.js**
+- value={[{
+    name: "Game",
+    rollNo: 1000
+}]}
+- Whatever is the value={} will go to Context like;
+- const Context = createContext(value);
