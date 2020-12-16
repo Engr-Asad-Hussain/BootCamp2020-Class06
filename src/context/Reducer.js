@@ -3,7 +3,7 @@ const Reducer = (state, action) => {
         case 'REMOVE':
             return action.payload;
             /*
-            action.payload will contains the newArray
+                action.payload will contains the newArray
             */
         default:
             return state;
