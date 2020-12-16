@@ -21,13 +21,14 @@
 
 ## values.map( (object, index)=>{} ) and key={index}
 - **View Details in Header.js**
-- {values.map( (object, index)=> {
+- ```{values.map( (object, index)=> {
         return (
         <li key={index}>Name: {object.name}, Roll No: {object.rollNo}</li>
         )
     })}
-- Here we are telling that; Array contains multiple object {} so, map that all {} one by one in <li>
-- Whenever we map() it returns indexes, so that we can give each <li> a unique index number
+```
+- Here we are telling that; Array contains multiple object {} so, map that all {} one by one in "<li>"
+- Whenever we map() it returns indexes, so that we can give each "<li>" a unique index number
 - Therefore we use key={index}
 - If we don't use key={index} then browser will give warning: of key props.
 
@@ -42,18 +43,20 @@
 ## { children }
 - **View detials in Context.js**
 - {children} is like a props. Means all the components will come at this place.
-- like: <Header /> and <ClassXA /> is a children for <ContextProvider> 
-    
+- like: ```<Header /> and <ClassXA />``` is a children for ```<ContextProvider>``` 
+```
     <ContextProvider>
         <Header />
         <ClassXA />
     </ContextProvider>
+```
 
 ## values={} in ContextProvider
--- **View details in Contex.js**
-- value={[{
+- **View details in Contex.js**
+- ```value={[{
     name: "Game",
     rollNo: 1000
 }]}
+```
 - Whatever is the value={} will go to Context like;
 - const Context = createContext(value);
