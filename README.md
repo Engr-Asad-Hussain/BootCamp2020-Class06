@@ -12,4 +12,4 @@
         )
 })}
 ```
-- We know that key={index} will map each <li> a unique key, so we are sending this index to getIndex(index) so that, particular index gets removed onClick.
+- We know that key={index} will map each ```<li>``` a unique key, so we are sending this index to getIndex(index) so that, particular index gets removed onClick.
