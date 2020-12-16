@@ -21,12 +21,14 @@
 
 ## values.map( (object, index)=>{} ) and key={index}
 - **View Details in Header.js**
-```{values.map( (object, index)=> {
-        return (
-        <li key={index}>Name: {object.name}, Roll No: {object.rollNo}</li>
-        )
-    })}
 ```
+{values.map( (object, index)=> {
+    return (
+    <li key={index}>Name: {object.name}, Roll No: {object.rollNo}</li>
+    )
+})}
+```
+
 - Here we are telling that; Array contains multiple object {} so, map that all {} one by one in ```<li>```
 - Whenever we map() it returns indexes, so that we can give each ```<li>``` a unique index number
 - Therefore we use key={index}
@@ -45,15 +47,16 @@
 - {children} is like a props. Means all the components will come at this place.
 - like: ```<Header /> and <ClassXA />``` is a children for ```<ContextProvider>``` 
 ```
-    <ContextProvider>
-        <Header />
-        <ClassXA />
-    </ContextProvider>
+<ContextProvider>
+    <Header />
+    <ClassXA />
+</ContextProvider>
 ```
 
 ## values={} in ContextProvider
 - **View details in Contex.js**
-```value={[{
+```
+value={[{
     name: "Game",
     rollNo: 1000
 }]}
